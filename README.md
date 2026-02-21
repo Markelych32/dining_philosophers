@@ -32,7 +32,7 @@ src/main/java/ru/solonchev/
 ├── entity/
 │   ├── Philosopher.java            — думает, берёт вилки, ест
 │   ├── Fork.java                   — разделяемый ресурс с synchronized-доступом
-│   └── DinnerCoordinator.java      — запускает потоки философов
+├── DinnerCoordinator.java          — запускает потоки философов
 └── utility/
     ├── LogUtility.java             — логирование с временными метками
     └── RandomUtility.java          — генерация случайных чисел
