@@ -22,4 +22,7 @@ public final class Constant {
     public static final int UPPER_BOUND_EAT_TIME_MS = 4000;
     public static final int WASTE_TIME_MS = 100;
 
+    public static final int NUMBER_OF_PHILOSOPHERS = 5;
+    public static final int NUMBER_OF_FORKS = 5;
+
 }

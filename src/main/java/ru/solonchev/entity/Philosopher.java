@@ -18,10 +18,15 @@ public class Philosopher {
 
 
     public Philosopher(int number, @NotNull Fork leftFork, @NotNull Fork rightFork) {
+        if (number == NUMBER_OF_PHILOSOPHERS - 1) {
+            Fork tempFork = leftFork;
+            leftFork = rightFork;
+            rightFork = tempFork;
+        }
         this.number = number;
+        this.name = PHILOSOPHER_NAME_TEMPLATE.formatted(number);
         this.leftFork = leftFork;
         this.rightFork = rightFork;
-        this.name = PHILOSOPHER_NAME_TEMPLATE.formatted(number);
     }
 
     @SneakyThrows

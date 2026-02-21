@@ -5,11 +5,10 @@ import ru.solonchev.entity.Philosopher;
 
 import java.util.stream.IntStream;
 
+import static ru.solonchev.Constant.NUMBER_OF_FORKS;
+import static ru.solonchev.Constant.NUMBER_OF_PHILOSOPHERS;
+
 public class Main {
-
-    private static final int NUMBER_OF_PHILOSOPHERS = 5;
-    private static final int NUMBER_OF_FORKS = 5;
-
 
     static void main() {
         Fork[] forks = new Fork[NUMBER_OF_FORKS];
