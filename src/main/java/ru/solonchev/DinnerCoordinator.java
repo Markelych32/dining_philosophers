@@ -30,8 +30,10 @@ public class DinnerCoordinator {
     private record PhilosopherDiningProcess(Philosopher philosopher) implements Runnable {
 
             @Override
+            @SneakyThrows
             public void run() {
                 IntStream.range(0, CYCLE_COUNT).forEach(_ -> {
+                    philosopher.waitForSeat();
                     philosopher.think();
                     philosopher.pickUpLeftFork();
                     wasteSomeTime();
@@ -39,6 +41,7 @@ public class DinnerCoordinator {
                     philosopher.eat();
                     philosopher.putDownLeftFork();
                     philosopher.putDownRightFork();
+                    philosopher.leaveSeat();
                 });
             }
 
