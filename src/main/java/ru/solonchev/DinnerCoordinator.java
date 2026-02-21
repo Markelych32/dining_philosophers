@@ -33,12 +33,12 @@ public class DinnerCoordinator {
             public void run() {
                 IntStream.range(0, CYCLE_COUNT).forEach(_ -> {
                     philosopher.think();
-                    philosopher.pickUpLeftFork();
+                    philosopher.pickUpForkWithLowerNumber();
                     wasteSomeTime();
-                    philosopher.pickUpRightFork();
+                    philosopher.pickUpForkWithHigherNumber();
                     philosopher.eat();
-                    philosopher.putDownLeftFork();
-                    philosopher.putDownRightFork();
+                    philosopher.putDownForkWithLowerNumber();
+                    philosopher.putDownForkWithHigherNumber();
                 });
             }
 

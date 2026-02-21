@@ -37,22 +37,37 @@ public class Philosopher {
         Thread.sleep(timeToEatMs);
     }
 
-    public void pickUpLeftFork() {
-        pickUpFork(leftFork, LEFT_SIDE);
+    public void pickUpForkWithLowerNumber() {
+        if (leftFork.getNumber() < rightFork.getNumber()) {
+            pickUpFork(leftFork, LEFT_SIDE);
+        } else {
+            pickUpFork(rightFork, RIGHT_SIDE);
+        }
     }
 
-    public void pickUpRightFork() {
-        pickUpFork(rightFork, RIGHT_SIDE);
+    public void pickUpForkWithHigherNumber() {
+        if (leftFork.getNumber() > rightFork.getNumber()) {
+            pickUpFork(leftFork, LEFT_SIDE);
+        } else {
+            pickUpFork(rightFork, RIGHT_SIDE);
+        }
     }
 
-    public void putDownLeftFork() {
-        putDownFork(leftFork, LEFT_SIDE);
+    public void putDownForkWithLowerNumber() {
+        if (leftFork.getNumber() < rightFork.getNumber()) {
+            putDownFork(leftFork, LEFT_SIDE);
+        } else {
+            putDownFork(rightFork, RIGHT_SIDE);
+        }
     }
 
-    public void putDownRightFork() {
-        putDownFork(rightFork, RIGHT_SIDE);
+    public void putDownForkWithHigherNumber() {
+        if (leftFork.getNumber() > rightFork.getNumber()) {
+            putDownFork(leftFork, LEFT_SIDE);
+        } else {
+            putDownFork(rightFork, RIGHT_SIDE);
+        }
     }
-
 
     private void pickUpFork(@NotNull Fork fork, @NotNull String side) {
         fork.pickUp();
