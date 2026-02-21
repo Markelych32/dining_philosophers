@@ -1,7 +1,8 @@
-package ru.solonchev.entity;
+package ru.solonchev;
 
 import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
+import ru.solonchev.entity.Philosopher;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;

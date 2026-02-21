@@ -1,6 +1,5 @@
 package ru.solonchev;
 
-import ru.solonchev.entity.DinnerCoordinator;
 import ru.solonchev.entity.Fork;
 import ru.solonchev.entity.Philosopher;
 
